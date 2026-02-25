@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagos | Gimnasio Olimpia</title>
+<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#0a0a0a">
+</head>
+
+<body>
+
+<header>
+    <img src="olimpia-logo.png" alt="Olimpia" class="logo-image">
+
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+        <a href="informes.html" onclick="toggleMenu();">Informes</a>
+        <a href="index.html" onclick="toggleMenu();">Introducción</a>
+        <a href="rutina.html" onclick="toggleMenu();">Rutina</a>
+        <a href="guia.html" onclick="toggleMenu();">Equipo</a>
+        <a href="pagos.html" onclick="toggleMenu();">Pagos</a>
+    </nav>
+</header>
+
+<div class="content-page">
+    <a href="index.html" class="back-link">← Volver al Inicio</a>
+    
+    <section id="pagos" class="section dark">
+        <h2>PAGOS Y TRANSFERENCIAS</h2>
+
+        <div class="payment-box">
+            <p><strong>Beneficiario:</strong> Juan Antonio Ibarra Castañeda</p>
+            <p><strong>Institución:</strong> Mercado Pago</p>
+
+            <div class="clabe-container">
+                <span id="clabe-text">722969010168387919</span>
+                <button onclick="copyClabe()" class="btn-copy">Copiar CLABE</button>
+            </div>
+
+            <p class="instruction">
+                ⚠️ IMPORTANTE: Incluye tu <strong>Número de Socio</strong> en el concepto y manda captura por WhatsApp.
+            </p>
+
+            <a href="https://wa.me/523141025319" class="btn-whatsapp">
+                Enviar Comprobante
+            </a>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 Gimnasio Olimpia Manzanillo</p>
+</footer>
+
+<script src="script.js"></script>
+
+<style>
+.content-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: var(--dark-bg);
+}
+
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.back-link:hover {
+    background: var(--primary-red);
+}
+</style>
+
+</body>
+</html>
