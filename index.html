@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gimnasio Olimpia | Miembro Digital</title>
+<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#0a0a0a">
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="apple-touch-icon" href="logo.png">
+
+<link rel="icon" type="image/png" sizes="192x192" href="logo.png">
+
+</head>
+
+<body>
+
+<!-- INTRO / SPLASH -->
+<div id="intro" class="active">
+    <div id="splash-screen">
+        <img src="olimpia-logo.png" alt="Olimpia Logo" class="splash-logo-image">
+
+        <div class="role-options">
+            <button onclick="enterApp('Hombre')">Hombre</button>
+            <button onclick="enterApp('Mujer')">Mujer</button>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="mainContent">
+
+<header>
+    <img src="olimpia-logo.png" alt="Olimpia" class="logo-image">
+
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+        <a href="informes.html" onclick="openInfo(); toggleMenu();">Informes</a>
+        <a href="introduccion.html" onclick="toggleMenu();">Introducción</a>
+        <a href="rutina.html" onclick="mostrarRutina(); toggleMenu();">Rutina</a>
+        <a href="guia.html" onclick="toggleMenu();">Equipo</a>
+        <a href="pagos.html" onclick="toggleMenu();">Pagos</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+<div class="install-wrapper">
+    <button class="install-btn" onclick="showInstallHelp()">
+        📲 Agregar a inicio
+    </button>
+</div>
+
+<h1>BIENVENIDO AL OLIMPIA</h1>
+<p>Tu progreso comienza aquí. Consulta rutinas, máquinas y realiza tus pagos en un solo lugar.</p>
+
+<button onclick="mostrarRutina()" class="btn-rutina">
+VER RUTINA
+</button>
+
+<div id="rutina-hombre" style="display:none;">
+<button onclick="cerrarRutina()" class="btn-back">← Volver</button>
+<img src="rutina-hombre.jpg" style="width:100%; max-width:800px;">
+</div>
+
+<div id="rutina-mujer" style="display:none;">
+<button onclick="cerrarRutina()" class="btn-back">← Volver</button>
+<img src="rutina-mujer.jpg" style="width:100%; max-width:800px;">
+</div>
+</section>
+
+<section id="horarios" class="section-padding">
+<h2>Horarios Olimpia</h2>
+<div class="horario-card">
+<p><strong>Lunes a Viernes:</strong><br> 5:00 AM - 10:30 PM</p>
+<hr>
+<p><strong>Sábados:</strong><br> 5:00 AM - 5:00 PM</p>
+<hr>
+<p><strong>Domingos:</strong><br> 8:00 AM - 2:00 PM</p>
+</div>
+</section>
+
+<section id="precios" class="section">
+<h2>COSTOS 2026</h2>
+<div class="pricing-grid">
+<div class="price-card"><h3>Visita</h3><p>$200</p><span>$300 DIA FESTIVO</span></div>
+<div class="price-card"><h3>Mes</h3><p>$1,000</p></div>
+<div class="price-card standout"><h3>Anualidad</h3><p>$12,000</p><span>Mejor Valor</span></div>
+</div>
+<p class="small-text">*Inscripción varía según el plan. Pregunta en recepción.</p>
+
+<button class="btn-main" onclick="openInfo()">
+    Ver más información
+</button>
+
+</button>
+</section>
+
+<section id="pagos" class="section dark">
+<h2>PAGOS Y TRANSFERENCIAS</h2>
+
+<div class="payment-box">
+<p><strong>Beneficiario:</strong> Juan Antonio Ibarra Castañeda</p>
+<p><strong>Institución:</strong> Mercado Pago</p>
+
+<div class="clabe-container">
+<span id="clabe-text">722969010168387919</span>
+<button onclick="copyClabe()" class="btn-copy">Copiar CLABE</button>
+</div>
+
+<p class="instruction">
+⚠️ IMPORTANTE: Incluye tu <strong>Número de Socio</strong> en el concepto y manda captura por WhatsApp.
+</p>
+
+<a href="https://wa.me/523141025319" class="btn-whatsapp">
+Enviar Comprobante
+</a>
+</div>
+</section>
+
+<!-- INFO MODAL -->
+<div id="infoModal" class="modal">
+    <div class="modal-content" style="background: #111; overflow-y: auto;">
+        <span class="close" onclick="closeInfo()">×</span>
+        <img src="informes-2026.jpg" style="width: 100%; height: auto; display: block;" alt="Informes 2026">
+    </div>
+</div>
+
+<!-- INSTALL HELP POPUP -->
+<div id="installHelp" class="install-popup">
+<div class="install-content">
+<span onclick="closeInstallHelp()" class="close-btn">&times;</span>
+
+<h3>📱 Agregar Olimpia a tu pantalla</h3>
+
+<p><strong>🍎 iPhone (Safari):</strong></p>
+<p>
+1. Abre el sitio en Safari<br>
+2. Toca Compartir ⬆️ abajo<br>
+3. Desliza hacia abajo en el menú<br>
+4. Toca "Agregar a pantalla de inicio"<br>
+5. Toca Agregar para confirmar
+</p>
+
+<p><strong>🤖 Android:</strong></p>
+<p>
+1. Toca menú ⋮ arriba<br>
+2. Selecciona Agregar a pantalla de inicio o Instalar app<br>
+3. Toca Agregar / Instalar
+</p>
+
+</div>
+</div>
+
+<footer>
+<p>&copy; 2026 Gimnasio Olimpia Manzanillo</p>
+</footer>
+
+</div> <!-- CLOSE mainContent -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
