@@ -49,39 +49,34 @@
 <script src="script.js"></script>
 
 <script>
-// Display the appropriate routine based on user's stored role
 window.addEventListener('load', () => {
     const role = localStorage.getItem('olimpiaRole');
     const container = document.getElementById('rutina-display');
     
     if (role === 'Hombre') {
         container.innerHTML = `
-            <!-- Image at top -->
             <img src="rutina-hombre.jpg" style="width:100%; max-width:800px; border-radius: 10px; box-shadow: 0 4px 20px rgba(211, 47, 47, 0.3); margin-bottom: 40px;" alt="Rutina Hombre">
             
-            <!-- Routine cards below image -->
             <div class="routine-container">
-                <!-- DÍA 1 - PECHO Y ESPALDA -->
                 <div class="day-card">
                     <h3>DÍA 1 - PECHO Y ESPALDA</h3>
                     <div class="exercise-list">
                         <p>4 SERIES DE 15 REPETICIONES</p>
                         <ul>
-                            <li>PECK DECK (PE-05 o PE-06)</li>
-                            <li>PRESS SENTADO (PE-07 o PE-08)</li>
-                            <li>JALÓN POLEA (ES-08 o ES-09)</li>
-                            <li>REMO POLEA (ES-06 o ES-07)</li>
+                            <li><a href="https://youtu.be/sAeDCAnbTpI?si=SkAFEPqBkcoH1nAs" target="_blank" class="exercise-link">PECK DECK (PE-05 o PE-06)</a></li>
+                            <li><a href="https://youtu.be/-ROZ50yvKBQ?si=WcUSxPty0FNly80c" target="_blank" class="exercise-link">PRESS SENTADO (PE-07 o PE-08)</a></li>
+                            <li><a href="https://youtu.be/BNcN-S8uQJ8?si=noIUk2iPdc0gNTkE" target="_blank" class="exercise-link">JALÓN POLEA (ES-08 o ES-09)</a></li>
+                            <li><a href="https://youtu.be/mosWG9OghPI?si=TP3PsUnNTwpSN76c" target="_blank" class="exercise-link">REMO POLEA (ES-06 o ES-07)</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- DÍA 2 - BRAZO -->
                 <div class="day-card">
                     <h3>DÍA 2 - BRAZO</h3>
                     <div class="exercise-list">
                         <p>4 SERIES DE 15 REPETICIONES</p>
                         <ul>
-                            <li>HOMBRO LATERAL (HO-03 o HO-04)</li>
+                            <li><a href="https://youtu.be/KQp8mvGTfyM?si=wMqQoWRQwErPVtDg" target="_blank" class="exercise-link">HOMBRO LATERAL (HO-03 o HO-04)</a></li>
                             <li>HOMBRO AL FRENTE CON MANCUERNAS</li>
                             <li>CURL DE BÍCEPS CON MANCUERNAS</li>
                             <li>TRÍCEPS EN POLEA ALTA CON SOGA</li>
@@ -89,22 +84,20 @@ window.addEventListener('load', () => {
                     </div>
                 </div>
 
-                <!-- DÍA 3 - PIERNAS -->
                 <div class="day-card">
                     <h3>DÍA 3 - PIERNAS</h3>
                     <div class="exercise-list">
                         <p>4 SERIES DE 15 REPETICIONES</p>
                         <ul>
-                            <li>EXTENSIONES (PI-01 o PI-02)</li>
-                            <li>CURL FEMORAL ACOSTADO (PI-03)</li>
-                            <li>SENTADILLA SMITH (PI-09 o PI-10)</li>
-                            <li>PRENSA LINEAL (PI-06)</li>
+                            <li><a href="https://youtu.be/jNRy4_mcT5w?si=h91wt5aWQWCtHLjV" target="_blank" class="exercise-link">EXTENSIONES (PI-01 o PI-02)</a></li>
+                            <li><a href="https://youtu.be/g0_8V7NLUjY?si=ph6OekMNar4_Skgf" target="_blank" class="exercise-link">CURL FEMORAL ACOSTADO (PI-03)</a></li>
+                            <li><a href="https://youtu.be/cwpoPRJjp4c?si=TGHlH_GSDcz0F6ts" target="_blank" class="exercise-link">SENTADILLA SMITH (PI-09 o PI-10)</a></li>
+                            <li><a href="https://youtu.be/qC9NSKjfseQ?si=QSxSRJzvOizRA-pW" target="_blank" class="exercise-link">PRENSA LINEAL (PI-06)</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Important Notes -->
             <div class="routine-notes">
                 <div class="note-box">
                     <strong>RUTINA:</strong> 4 series de 15 repeticiones deben durar 10 minutos en promedio
@@ -114,66 +107,60 @@ window.addEventListener('load', () => {
                 </div>
             </div>
         `;
-} else if (role === 'Mujer') {
-    container.innerHTML = `
-        <!-- Image at top -->
-        <img src="rutina-mujer.jpg" style="width:100%; max-width:800px; border-radius: 10px; box-shadow: 0 4px 20px rgba(211, 47, 47, 0.3); margin-bottom: 40px;" alt="Rutina Mujer">
-        
-        <!-- Women's routine cards -->
-        <div class="routine-container">
-            <!-- DÍA 1 - PIERNAS -->
-            <div class="day-card">
-                <h3>DÍA 1 - PIERNAS</h3>
-                <div class="exercise-list">
-                    <p>4 SERIES DE 15 REPETICIONES</p>
-                    <ul>
-                        <li>EXTENSIONES (PI-01 o PI-02)</li>
-                        <li>CURL FEMORAL ACOSTADO (PI-03)</li>
-                        <li>SENTADILLA SMITH (PI-09 o PI-10)</li>
-                        <li>PRENSA LINEAL (PI-06)</li>
-                    </ul>
+    } else if (role === 'Mujer') {
+        container.innerHTML = `
+            <img src="rutina-mujer.jpg" style="width:100%; max-width:800px; border-radius: 10px; box-shadow: 0 4px 20px rgba(211, 47, 47, 0.3); margin-bottom: 40px;" alt="Rutina Mujer">
+            
+            <div class="routine-container">
+                <div class="day-card">
+                    <h3>DÍA 1 - PIERNAS</h3>
+                    <div class="exercise-list">
+                        <p>4 SERIES DE 15 REPETICIONES</p>
+                        <ul>
+                            <li><a href="https://youtu.be/jNRy4_mcT5w?si=h91wt5aWQWCtHLjV" target="_blank" class="exercise-link">EXTENSIONES (PI-01 o PI-02)</a></li>
+                            <li><a href="https://youtu.be/g0_8V7NLUjY?si=ph6OekMNar4_Skgf" target="_blank" class="exercise-link">CURL FEMORAL ACOSTADO (PI-03)</a></li>
+                            <li><a href="https://youtu.be/cwpoPRJjp4c?si=TGHlH_GSDcz0F6ts" target="_blank" class="exercise-link">SENTADILLA SMITH (PI-09 o PI-10)</a></li>
+                            <li><a href="https://youtu.be/qC9NSKjfseQ?si=QSxSRJzvOizRA-pW" target="_blank" class="exercise-link">PRENSA LINEAL (PI-06)</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <h3>DÍA 2 - BRAZO</h3>
+                    <div class="exercise-list">
+                        <p>4 SERIES DE 15 REPETICIONES</p>
+                        <ul>
+                            <li><a href="https://youtu.be/KQp8mvGTfyM?si=wMqQoWRQwErPVtDg" target="_blank" class="exercise-link">HOMBRO LATERAL (HO-03 o HO-04)</a></li>
+                            <li>HOMBRO AL FRENTE CON MANCUERNAS</li>
+                            <li>CURL DE BÍCEPS CON MANCUERNAS</li>
+                            <li>TRÍCEPS EN POLEA ALTA CON SOGA</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <h3>DÍA 3 - GLÚTEO</h3>
+                    <div class="exercise-list">
+                        <p>4 SERIES DE 15 REPETICIONES</p>
+                        <ul>
+                            <li>PATADA PARADO (GL-03)</li>
+                            <li>ABDUCCIÓN (GL-02)</li>
+                            <li>HIP TRUST (GL-04)</li>
+                            <li><a href="https://youtu.be/xdzl1A_hVhA?si=YwwCf_dPxOM1TM6a" target="_blank" class="exercise-link">PESO MUERTO (PI-16)</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- DÍA 2 - BRAZO -->
-            <div class="day-card">
-                <h3>DÍA 2 - BRAZO</h3>
-                <div class="exercise-list">
-                    <p>4 SERIES DE 15 REPETICIONES</p>
-                    <ul>
-                        <li>HOMBRO LATERAL (HO-03 o HO-04)</li>
-                        <li>HOMBRO AL FRENTE CON MANCUERNAS</li>
-                        <li>CURL DE BÍCEPS CON MANCUERNAS</li>
-                        <li>TRÍCEPS EN POLEA ALTA CON SOGA</li>
-                    </ul>
+            <div class="routine-notes">
+                <div class="note-box">
+                    <strong>RUTINA:</strong> 4 series de 15 repeticiones deben durar 10 minutos en promedio
+                </div>
+                <div class="note-box">
+                    <strong>CARDIO:</strong> 20 minutos después de terminar la rutina en cualquier máquina disponible
                 </div>
             </div>
-
-            <!-- DÍA 3 - GLÚTEO -->
-            <div class="day-card">
-                <h3>DÍA 3 - GLÚTEO</h3>
-                <div class="exercise-list">
-                    <p>4 SERIES DE 15 REPETICIONES</p>
-                    <ul>
-                        <li>PATADA PARADO (GL-03)</li>
-                        <li>ABDUCCIÓN (GL-02)</li>
-                        <li>HIP TRUST (GL-04)</li>
-                        <li>PESO MUERTO (PI-16)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Important Notes -->
-        <div class="routine-notes">
-            <div class="note-box">
-                <strong>RUTINA:</strong> 4 series de 15 repeticiones deben durar 10 minutos en promedio
-            </div>
-            <div class="note-box">
-                <strong>CARDIO:</strong> 20 minutos después de terminar la rutina en cualquier máquina disponible
-            </div>
-        </div>
-    `;
+        `;
     } else {
         container.innerHTML = '<p style="text-align: center; color: var(--text-gray);">Por favor, regresa a la <a href="index.html" style="color: var(--primary-red);">página de inicio</a> para seleccionar tu perfil.</p>';
     }
@@ -208,6 +195,17 @@ window.addEventListener('load', () => {
 
 .back-link:hover {
     background: var(--primary-red);
+}
+
+.exercise-link {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid var(--primary-red, #d32f2f);
+    transition: color 0.2s;
+}
+
+.exercise-link:hover {
+    color: #d32f2f;
 }
 </style>
 
